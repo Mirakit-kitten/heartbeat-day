@@ -21,7 +21,7 @@
 
 .countdown {
   position: absolute;
-  top: 65.6%;
+  top: 70.8%;
   left: 50.5%;
   transform: translate(-50%, -50%);
   font-size: 34px;
@@ -91,8 +91,34 @@
     }
   }
 </script>
+
+<script>
+  const phrases = [
+    "贴贴成功！记得抱紧我哦～",
+    "你再点一下我就亲你了 😚",
+    "今天也想你想到数不清 🩷",
+    "我们还剩 " + document.getElementById("countdown").textContent + " 就贴贴啦！",
+    "你是不是偷偷打开网页看我～"
+  ];
+
+  document.querySelector('.container').addEventListener('click', () => {
+    const msg = phrases[Math.floor(Math.random() * phrases.length)];
+    alert(msg);
+  });
+</script>
   
+<script>
+  const now = new Date();
+  if (now.getMonth() === 10 && now.getDate() === 22) {
+    window.location.href = "celebration.html";
+  }
+</script>
+  
+
+
+
 </body>
 </html>
+
 
 
