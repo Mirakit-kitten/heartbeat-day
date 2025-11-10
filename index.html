@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <title>心跳日倒计时 💗</title>
+  <style>
+    body {
+      background-color: #fff7f0;
+      font-family: 'Press Start 2P', 'Courier New', monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      position: relative;
+    }
+
+    .countdown {
+      position: absolute;
+      top: 67%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 26px;
+      color: #f58bb0;
+      text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff;
+      font-weight: bold;
+      font-family: 'Courier New', monospace;
+    }
+
+    .caption {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #999;
+    }
+
+    img {
+      width: 360px;
+      image-rendering: pixelated;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="倒计时(去字).png" alt="心跳日倒计时图" />
+    <div class="countdown" id="countdown">加载中...</div>
+  </div>
+  <div class="caption">我们的小心跳日是 11月22日 💗</div>
+
+  <script>
+    function updateCountdown() {
+      const now = new Date();
+      const targetDate = new Date(now.getFullYear(), 10, 22); // 11月是第10个月
+      if (now > targetDate) {
+        targetDate.setFullYear(targetDate.getFullYear() + 1);
+      }
+      const diffTime = targetDate - now;
+      const daysLeft = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      document.getElementById("countdown").textContent = daysLeft + " 天";
+    }
+
+    updateCountdown();
+  </script>
+</body>
+</html>
