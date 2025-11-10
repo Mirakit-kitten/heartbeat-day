@@ -19,17 +19,17 @@
       position: relative;
     }
 
-    .countdown {
-      position: absolute;
-      top: 67%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 26px;
-      color: #f58bb0;
-      text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff;
-      font-weight: bold;
-      font-family: 'Courier New', monospace;
-    }
+.countdown {
+  position: absolute;
+  top: 63.5%;
+  left: 50.5%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  color: #f69ac6;
+  text-shadow: 2px 2px 2px #ffffff;
+  font-weight: 800;
+  font-family: 'Courier New', monospace;
+}
 
     .caption {
       margin-top: 20px;
@@ -48,7 +48,7 @@
     <img src="倒计时(去字).png" alt="心跳日倒计时图" />
     <div class="countdown" id="countdown">加载中...</div>
   </div>
-  <div class="caption">我们的小心跳日是 11月22日 💗</div>
+  <div class="caption">Our heartbeat day is Novermber 22th 💗</div>
 
   <script>
     function updateCountdown() {
@@ -64,5 +64,12 @@
 
     updateCountdown();
   </script>
+  <script>
+  document.querySelector('.container').addEventListener('click', () => {
+    alert('贴贴成功！今天也要幸福哟 🥰');
+  });
+</script>
+
 </body>
 </html>
+
